@@ -1,5 +1,6 @@
 const utils = require('./utils');
-const jsRules = require('./rules/jsRule');
+const jsRules = require('./rules/js-rule');
+const styleRules = require('./rules/style-rule');
 const plugins = require('./plugins');
 
 /*
@@ -16,6 +17,6 @@ module.exports = {
     },
     plugins: [...plugins],
     module: {
-        rules: [...jsRules]
+        rules: [...jsRules, ...styleRules]
     }
 }
